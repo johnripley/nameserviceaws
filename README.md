@@ -54,7 +54,13 @@
  9. Test service from another machine
       - from AWS EC2 console, get the <public ip address of your EC2 instance>
       - curl -X GET 'http://<public ip address of your EC2 instance>:8080/nameservice/gender?name=Riley&year=2014' -H 'Accept:application/json'	
-    
+ 10. Don't forget to shut down your EC2 instance when you are done
+      - In AWS EC2 console, right click on instance and select
+	- Instance State/Stop to shut down the instance (you can restart it later)
+	- Instance State/Terminate to destroy the image (you will have to repeat steps 3-9 again)
+	- Understand how these states will affect your AWS billing
+
+	
 #### IAM Role
   Create Role
   - Trusted Entity - AWS Service - EC2 - EC2 (Allows EC2 instances to call services on your behalf)
